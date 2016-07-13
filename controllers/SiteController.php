@@ -98,15 +98,15 @@ class SiteController extends Controller
 
     /**
      * say
-     * http://apidebug.cxm/index.php?r=site/say
+     * http://yii2.com/index.php?r=site/say
      */
-    public function actionSay($message = 'hello'){
+    public function actionSay($message = 'hello1'){
         return $this->render('say',['message'=>$message]);
     }
 
     /*
      *模型测试
-     * http://apidebug.cxm/index.php?r=site/entry
+     * http://yii2.com/index.php?r=site/entry
      *
      */
     public function actionEntry(){

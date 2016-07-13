@@ -18,7 +18,7 @@ class CountryController extends Controller
     /**
      * @return string
      * 显示国家
-     * http://apidebug.cxm/index.php?r=country/index
+     * http://yii2.com/index.php?r=country/index
      */
     public function actionIndex()
     {
