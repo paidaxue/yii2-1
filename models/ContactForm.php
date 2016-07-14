@@ -18,6 +18,7 @@ class ContactForm extends Model
     public $verifyCode;
 
     /**
+     * 验证规则
      * @return array the validation rules.
      */
     public function rules()

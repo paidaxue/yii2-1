@@ -56,6 +56,20 @@ class TestController extends Controller
         //显示为"名字"  
         echo $model->getAttributeLabel('name');     
         
+        
+        //字段是模型通过调用yii\base\Model::toArray() 生成的数组的单元名
+        echo "\t\n<br>";
+        $array = $model->toArray();
+        //print_r($array);
+        /* Array
+        (
+            [name] => example
+            [email] => 18216575@qq.com
+            [subject] =>
+            [body] =>
+            [verifyCode] =>
+        ) */
+        
     }
     
 }
