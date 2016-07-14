@@ -2,6 +2,8 @@
 
 $params = require(__DIR__ . '/params.php');
 
+$controlermap = require (__DIR__.'/controllermap.php');
+
 
 $config = [
     
@@ -64,12 +66,13 @@ $config = [
             'allowedIPs' => ['127.0.0.1', '::1','10.20.50.222', '192.168.0.*', '192.168.178.20'] // 按需调整这里
         ], */
         'db' => require(__DIR__ . '/db.php'),
+        
 
     ],
     
     
     
-    
+    'controllerMap' => $controlermap,
     
     'params' => $params,
 
