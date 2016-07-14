@@ -75,6 +75,8 @@ $config = [
     'controllerMap' => $controlermap,
     
     'params' => $params,
+    
+    'defaultRoute' => 'country',        //定义默认控制器
 
 ];
 
