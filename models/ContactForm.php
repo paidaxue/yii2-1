@@ -10,6 +10,7 @@ use yii\base\Model;
  */
 class ContactForm extends Model
 {
+    //定义属性
     public $name;
     public $email;
     public $subject;
@@ -32,11 +33,16 @@ class ContactForm extends Model
     }
 
     /**
+     * 如果你不想用自动生成的标签， 可以覆盖 yii\base\Model::attributeLabels() 方法明确指定属性标签
      * @return array customized attribute labels
      */
     public function attributeLabels()
     {
         return [
+            'name'      =>'名字',
+            'email'     =>'邮箱',
+            'subject'   =>'项目',
+            'body'      =>'内容',
             'verifyCode' => 'Verification Code',
         ];
     }
