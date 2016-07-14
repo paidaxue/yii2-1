@@ -14,7 +14,12 @@ $config = [
     
     //指定启动阶段需要运行的组件,在启动阶段，每个组件都会实例化
     //启动太多的组件会降低系统性能， 因为每次请求都需要重新运行启动组件，因此谨慎配置启动组件
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        //引导启动组件,将 log 组件 ID 加入引导让它始终载
+        //其他组件不在这里定义的话,只有在访问的时候才会被实例化\Yii::$app->componentID
+        'log'
+        
+    ],     
     
     
     //最重要的属性，它允许你注册多个在其他地方使用的应用组件
@@ -22,6 +27,7 @@ $config = [
         
         //每一个应用组件指定一个key-value对的数组，key代表组件ID， value代表组件类名或 配置
         //在应用中可以任意注册组件， 并可以通过表达式 \Yii::$app->ComponentID 全局访问
+        //只有在访问的时候才会被实例化,第一次实例化,以后直接用不会再重新生成对象
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '233333333333333333',
