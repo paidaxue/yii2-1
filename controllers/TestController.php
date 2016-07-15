@@ -58,4 +58,12 @@ class TestController extends Controller
         
     }
     
+    /**
+     * http://yii2.com/index.php?r=test/login
+     */
+    public function actionLogin(){
+        
+        return $this->render('login');
+    }
+    
 }
